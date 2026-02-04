@@ -1,0 +1,138 @@
+
+form {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  padding: 50px 50px 20px 50px;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(242, 243, 243);
+  border: 1px solid rgba(88, 61, 131, 0.377);
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px 2px inset rgba(75, 75, 75, 0.493);
+  
+}
+
+input {
+  width: 80%;
+  padding: 10px;
+  border: 1px solid rgb(216, 215, 215);
+  border-radius: 5px;
+}
+
+p {
+    padding: 10px;
+    margin: 0px;
+  color: white;
+  width: 40%;
+  background-color: rgb(88, 88, 88);
+  border-radius: 5px;
+}
+
+#nome {
+  width: 75%;
+  margin-right: 20px;
+}
+
+#idade {
+  width: 10%;
+  text-align: center;
+}
+
+#idade::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.campos {
+  width: 100%;
+  display: flex;
+  margin: 20px;
+  justify-content: space-between;
+}
+
+.btnTelefoneAdicionar {
+  width: 40px;
+  height: 40px;
+  background-color: #765df6;
+  color: white;
+  border: 0px;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+.btnTelefoneAdicionar:active{
+  border: 3px inset  #6c51f7;
+}
+
+.btnTelefoneRemover {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  color: #765df6;
+  border: 1px solid rgb(158, 158, 158);
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+.btnTelefoneRemover:active{
+  border: 3px inset  #6c51f7;
+}
+
+.telefonesAdicionados {
+  padding: 16px 0px 16px 0px;
+  width: 100%;
+  height: 300px;
+  max-height: 200px;
+  overflow: auto;
+  background-color: rgb(242, 243, 243);
+  border: 1px solid rgba(88, 61, 131, 0.377);
+  border-radius: 5px;
+  box-shadow: 1px 1px 7px 2px inset rgba(43, 43, 43, 0.493);
+}
+
+.telefonos {
+  padding: 0px 0px 5px 0px;
+  margin: 0px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.btnSalvar {
+  margin-top: 20px;
+  width: 120px;
+  height: 45px;
+  background-color: aliceblue;
+  border: 2px solid #765df6;
+  border-radius: 5px;
+  font-size: 1.1em;
+  font-weight: 700;
+  color: #694df8;
+  transition: 0.3s;
+}
+
+.btnSalvar:active{
+  background-color: #694df8;
+  color: aliceblue;
+}
+
+.btnSalvar:disabled,
+.btnSalvar[disabled] {
+  border: 1px solid #b1a3f7;
+  color: #a797f7;
+}
+
+.telefonesAdicionados::-webkit-scrollbar {
+  width: 8px;
+}
+
+.telefonesAdicionados::-webkit-scrollbar-track {
+  background: white;
+}
+
+.telefonesAdicionados::-webkit-scrollbar-thumb {
+  background: #765df6;
+  border-radius: 5px;
+}

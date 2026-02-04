@@ -1,0 +1,20 @@
+<div class="modal" *ngIf="detalhes || editar">
+    <button (click)="fecharModal()">x</button>
+    
+     <div class="conteudoDetalhes" *ngIf="detalhes">
+        <h2>Detalhes do contato</h2>
+      <div class="detalhes">
+      <p>Nome: {{ contato.nome }}</p>
+      <p>Idade: {{ contato.idade }}</p>
+      <p>Telefones: </p>
+      <div class="numeros"><p class="telefones" *ngFor="let numero of contato.telefones">{{ numero.numero }}</p></div>
+      
+      </div>
+      
+    </div>
+    <div class="conteudoEditar" *ngIf="editar">
+        <h2>Editar Contato</h2>
+        <app-form [editarContato]="contato" (fechar)="fecharModalEditar($event)"></app-form>
+        
+      </div>
+  </div>    

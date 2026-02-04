@@ -1,0 +1,95 @@
+.modal {
+  position: absolute;
+  z-index: 10;
+  width: 70%;
+  height: 91%;
+  top: 0%;
+  left: 50%;
+  padding: 20px;
+  border: 10px double rgb(66, 66, 66);
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  backdrop-filter: blur();
+}
+
+.conteudoDetalhes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.conteudoEditar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.detalhes{
+    width: 80%;
+    padding-top: 50px;
+    border-top: 1px solid rgb(165, 162, 162);
+
+}
+
+p{
+    background-color: rgb(106, 50, 211);
+    color: rgb(255, 253, 248);
+    border-radius: 5px;
+    padding: 8px;
+    width: fit-content;
+
+}
+
+.telefones {
+  padding: 10px;
+  margin: 2px;
+  color: white;
+  width: fit-content;
+  height: 20px;
+  background-color: rgb(88, 88, 88);
+  border-radius: 5px;
+}
+
+.numeros{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    padding: 10px;
+    max-height: 300px;
+    border: 1px solid rgb(65, 65, 65);
+    border-radius: 5px;
+    background-color: rgb(54, 54, 54);
+    overflow-y: auto;
+}
+
+.numeros::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .numeros::-webkit-scrollbar-track {
+    background: white;
+  }
+  
+  .numeros::-webkit-scrollbar-thumb {
+    background: #765df6;
+    border-radius: 5px;
+  }
+
+h2 {
+  color: rgb(94, 92, 92);
+}
+
+button {
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  font-size: 1.2em;
+  font-weight: 700;
+  left: 93%;
+  top: 2%;
+}
+
+button:active {
+  color: red;
+}

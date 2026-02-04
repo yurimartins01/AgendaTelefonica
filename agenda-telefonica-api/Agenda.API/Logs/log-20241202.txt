@@ -1,0 +1,126 @@
+2024-12-02 12:23:11.007 -03:00 [INF] Now listening on: https://localhost:7016
+2024-12-02 12:23:11.033 -03:00 [INF] Now listening on: http://localhost:5214
+2024-12-02 12:23:11.082 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-02 12:23:11.082 -03:00 [INF] Hosting environment: Development
+2024-12-02 12:23:11.082 -03:00 [INF] Content root path: D:\GitHub\mrtnsy\AgendaTelefonica\AgendaAPI\Agenda.API
+2024-12-02 12:23:12.656 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7016/swagger/index.html - null null
+2024-12-02 12:23:12.854 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7016/swagger/index.html - 200 null text/html;charset=utf-8 207.738ms
+2024-12-02 12:23:12.885 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7016/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-02 12:23:12.885 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7016/_vs/browserLink - null null
+2024-12-02 12:23:12.891 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7016/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 6.1173ms
+2024-12-02 12:23:12.935 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7016/_vs/browserLink - 200 null text/javascript; charset=UTF-8 50.1816ms
+2024-12-02 12:23:13.096 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7016/swagger/v1/swagger.json - null null
+2024-12-02 12:23:13.226 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7016/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 130.5732ms
+2024-12-02 12:23:19.904 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7016/api/Contatos - null null
+2024-12-02 12:23:19.913 -03:00 [INF] CORS policy execution successful.
+2024-12-02 12:23:19.918 -03:00 [INF] Executing endpoint 'Agenda.API.Controllers.ContatosController.BuscarTodosContatos (Agenda.API)'
+2024-12-02 12:23:19.942 -03:00 [INF] Route matched with {action = "BuscarTodosContatos", controller = "Contatos"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[Agenda.Application.DTOs.ContatoDto]]] BuscarTodosContatos() on controller Agenda.API.Controllers.ContatosController (Agenda.API).
+2024-12-02 12:23:21.210 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7016/api/Contatos - null null
+2024-12-02 12:23:21.210 -03:00 [INF] CORS policy execution successful.
+2024-12-02 12:23:21.211 -03:00 [INF] Executing endpoint 'Agenda.API.Controllers.ContatosController.BuscarTodosContatos (Agenda.API)'
+2024-12-02 12:23:21.211 -03:00 [INF] Route matched with {action = "BuscarTodosContatos", controller = "Contatos"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[Agenda.Application.DTOs.ContatoDto]]] BuscarTodosContatos() on controller Agenda.API.Controllers.ContatosController (Agenda.API).
+2024-12-02 12:23:21.457 -03:00 [INF] Executed DbCommand (39ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Idade], [c].[Nome], [t].[Id], [t].[IdContato], [t].[Numero]
+FROM [Contato] AS [c]
+LEFT JOIN [Telefone] AS [t] ON [c].[Id] = [t].[IdContato]
+ORDER BY [c].[Nome], [c].[Id], [t].[Id]
+2024-12-02 12:23:21.457 -03:00 [INF] Executed DbCommand (39ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Idade], [c].[Nome], [t].[Id], [t].[IdContato], [t].[Numero]
+FROM [Contato] AS [c]
+LEFT JOIN [Telefone] AS [t] ON [c].[Id] = [t].[IdContato]
+ORDER BY [c].[Nome], [c].[Id], [t].[Id]
+2024-12-02 12:23:21.566 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Agenda.Application.DTOs.ContatoDto, Agenda.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-02 12:23:21.566 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Agenda.Application.DTOs.ContatoDto, Agenda.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-02 12:23:21.574 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7016/api/Contatos - null null
+2024-12-02 12:23:21.574 -03:00 [INF] CORS policy execution successful.
+2024-12-02 12:23:21.574 -03:00 [INF] Executing endpoint 'Agenda.API.Controllers.ContatosController.BuscarTodosContatos (Agenda.API)'
+2024-12-02 12:23:21.574 -03:00 [INF] Route matched with {action = "BuscarTodosContatos", controller = "Contatos"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[Agenda.Application.DTOs.ContatoDto]]] BuscarTodosContatos() on controller Agenda.API.Controllers.ContatosController (Agenda.API).
+2024-12-02 12:23:21.576 -03:00 [INF] Executed action Agenda.API.Controllers.ContatosController.BuscarTodosContatos (Agenda.API) in 361.7897ms
+2024-12-02 12:23:21.576 -03:00 [INF] Executed action Agenda.API.Controllers.ContatosController.BuscarTodosContatos (Agenda.API) in 1631.1068ms
+2024-12-02 12:23:21.576 -03:00 [INF] Executed endpoint 'Agenda.API.Controllers.ContatosController.BuscarTodosContatos (Agenda.API)'
+2024-12-02 12:23:21.576 -03:00 [INF] Executed endpoint 'Agenda.API.Controllers.ContatosController.BuscarTodosContatos (Agenda.API)'
+2024-12-02 12:23:21.583 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7016/api/Contatos - 200 null application/json; charset=utf-8 373.8883ms
+2024-12-02 12:23:21.583 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7016/api/Contatos - 499 null application/json; charset=utf-8 1680.483ms
+2024-12-02 12:23:21.630 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Idade], [c].[Nome], [t].[Id], [t].[IdContato], [t].[Numero]
+FROM [Contato] AS [c]
+LEFT JOIN [Telefone] AS [t] ON [c].[Id] = [t].[IdContato]
+ORDER BY [c].[Nome], [c].[Id], [t].[Id]
+2024-12-02 12:23:21.631 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Agenda.Application.DTOs.ContatoDto, Agenda.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-02 12:23:21.632 -03:00 [INF] Executed action Agenda.API.Controllers.ContatosController.BuscarTodosContatos (Agenda.API) in 57.31ms
+2024-12-02 12:23:21.632 -03:00 [INF] Executed endpoint 'Agenda.API.Controllers.ContatosController.BuscarTodosContatos (Agenda.API)'
+2024-12-02 12:23:21.632 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7016/api/Contatos - 200 null application/json; charset=utf-8 58.7554ms
+2024-12-02 12:23:27.859 -03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7016/api/Contatos - null null
+2024-12-02 12:23:27.859 -03:00 [INF] CORS policy execution successful.
+2024-12-02 12:23:27.860 -03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7016/api/Contatos - 204 null null 1.5028ms
+2024-12-02 12:23:27.861 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7016/api/Contatos - application/json 72
+2024-12-02 12:23:27.862 -03:00 [INF] CORS policy execution successful.
+2024-12-02 12:23:27.862 -03:00 [INF] Executing endpoint 'Agenda.API.Controllers.ContatosController.AdicionarContato (Agenda.API)'
+2024-12-02 12:23:27.871 -03:00 [INF] Route matched with {action = "AdicionarContato", controller = "Contatos"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AdicionarContato(Agenda.Application.DTOs.CriarContatoDto) on controller Agenda.API.Controllers.ContatosController (Agenda.API).
+2024-12-02 12:23:28.045 -03:00 [INF] Executed DbCommand (18ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Contato] ([Idade], [Nome])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+2024-12-02 12:23:28.069 -03:00 [INF] Executed DbCommand (4ms) [Parameters=[@p2='?' (DbType = Int32), @p3='?' (Size = 16)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Telefone] ([IdContato], [Numero])
+OUTPUT INSERTED.[Id]
+VALUES (@p2, @p3);
+2024-12-02 12:23:28.089 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'Agenda.Application.DTOs.ContatoDto'.
+2024-12-02 12:23:28.104 -03:00 [INF] Executed action Agenda.API.Controllers.ContatosController.AdicionarContato (Agenda.API) in 232.982ms
+2024-12-02 12:23:28.104 -03:00 [INF] Executed endpoint 'Agenda.API.Controllers.ContatosController.AdicionarContato (Agenda.API)'
+2024-12-02 12:23:28.104 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7016/api/Contatos - 201 null application/json; charset=utf-8 242.7397ms
+2024-12-02 12:23:30.269 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7016/api/Contatos - null null
+2024-12-02 12:23:30.269 -03:00 [INF] CORS policy execution successful.
+2024-12-02 12:23:30.269 -03:00 [INF] Executing endpoint 'Agenda.API.Controllers.ContatosController.BuscarTodosContatos (Agenda.API)'
+2024-12-02 12:23:30.270 -03:00 [INF] Route matched with {action = "BuscarTodosContatos", controller = "Contatos"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[Agenda.Application.DTOs.ContatoDto]]] BuscarTodosContatos() on controller Agenda.API.Controllers.ContatosController (Agenda.API).
+2024-12-02 12:23:30.273 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Idade], [c].[Nome], [t].[Id], [t].[IdContato], [t].[Numero]
+FROM [Contato] AS [c]
+LEFT JOIN [Telefone] AS [t] ON [c].[Id] = [t].[IdContato]
+ORDER BY [c].[Nome], [c].[Id], [t].[Id]
+2024-12-02 12:23:30.275 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Agenda.Application.DTOs.ContatoDto, Agenda.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-02 12:23:30.275 -03:00 [INF] Executed action Agenda.API.Controllers.ContatosController.BuscarTodosContatos (Agenda.API) in 5.7683ms
+2024-12-02 12:23:30.275 -03:00 [INF] Executed endpoint 'Agenda.API.Controllers.ContatosController.BuscarTodosContatos (Agenda.API)'
+2024-12-02 12:23:30.276 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7016/api/Contatos - 200 null application/json; charset=utf-8 6.8088ms
+2024-12-02 12:23:32.873 -03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7016/api/Contatos/54 - null null
+2024-12-02 12:23:32.874 -03:00 [INF] CORS policy execution successful.
+2024-12-02 12:23:32.874 -03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7016/api/Contatos/54 - 204 null null 0.8596ms
+2024-12-02 12:23:32.876 -03:00 [INF] Request starting HTTP/2 DELETE https://localhost:7016/api/Contatos/54 - null null
+2024-12-02 12:23:32.876 -03:00 [INF] CORS policy execution successful.
+2024-12-02 12:23:32.876 -03:00 [INF] Executing endpoint 'Agenda.API.Controllers.ContatosController.DeletarContato (Agenda.API)'
+2024-12-02 12:23:32.880 -03:00 [INF] Route matched with {action = "DeletarContato", controller = "Contatos"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeletarContato(Int32) on controller Agenda.API.Controllers.ContatosController (Agenda.API).
+2024-12-02 12:23:32.913 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Idade], [t].[Nome], [t0].[Id], [t0].[IdContato], [t0].[Numero]
+FROM (
+    SELECT TOP(1) [c].[Id], [c].[Idade], [c].[Nome]
+    FROM [Contato] AS [c]
+    WHERE [c].[Id] = @__id_0
+) AS [t]
+LEFT JOIN [Telefone] AS [t0] ON [t].[Id] = [t0].[IdContato]
+ORDER BY [t].[Id], [t0].[Id]
+2024-12-02 12:23:32.917 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Idade], [t].[Nome], [t0].[Id], [t0].[IdContato], [t0].[Numero]
+FROM (
+    SELECT TOP(1) [c].[Id], [c].[Idade], [c].[Nome]
+    FROM [Contato] AS [c]
+    WHERE [c].[Id] = @__id_0
+) AS [t]
+LEFT JOIN [Telefone] AS [t0] ON [t].[Id] = [t0].[IdContato]
+ORDER BY [t].[Id], [t0].[Id]
+2024-12-02 12:23:32.930 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Telefone]
+OUTPUT 1
+WHERE [Id] = @p0 AND [IdContato] = @p1;
+DELETE FROM [Contato]
+OUTPUT 1
+WHERE [Id] = @p2;
+2024-12-02 12:23:32.939 -03:00 [INF] Contato excluido --> {"Id":54,"Nome":"LogTeste","Idade":43,"Telefones":[{"Id":62,"IdContato":54,"Numero":"2545245","Contato":null,"$type":"Telefone"}],"$type":"Contato"}
+2024-12-02 12:23:32.943 -03:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2024-12-02 12:23:32.943 -03:00 [INF] Executed action Agenda.API.Controllers.ContatosController.DeletarContato (Agenda.API) in 62.4493ms
+2024-12-02 12:23:32.943 -03:00 [INF] Executed endpoint 'Agenda.API.Controllers.ContatosController.DeletarContato (Agenda.API)'
+2024-12-02 12:23:32.943 -03:00 [INF] Request finished HTTP/2 DELETE https://localhost:7016/api/Contatos/54 - 204 null null 67.3821ms

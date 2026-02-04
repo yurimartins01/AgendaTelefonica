@@ -1,0 +1,51 @@
+<div class="lista">
+  <div class="titulo"><h1>Contatos</h1></div>
+
+  <div class="buscar">
+    <input
+      #busca
+      (input)="buscarContato($event)"
+      type="text"
+      placeholder="Digite o nome ou telefone"
+    />
+  </div>
+
+  <div class="tabela">
+    <table>
+      <thead>
+        <th>Nome</th>
+        <th class="celula-telefone">Telefone</th>
+        <th class="celula-acoes">
+          <button class="btn-atualizar" (click)="obterContatos()">
+            Atualizar
+          </button>
+        </th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let contato of contatosFiltrados; let i = index">
+          <td>{{ contato.nome }}</td>
+
+          <td class="celula-telefone">
+            {{
+              contato.telefones.length > 0 ? contato.telefones[0].numero : " "
+            }}
+          </td>
+          <td class="celula-acoes">
+            <button class="btn-acao" (click)="abrirModalDetalhes(i)">
+              <fa-icon [icon]="olho"></fa-icon>
+            </button>
+            <button class="btn-acao" (click)="abrirModalEditar(i)">
+              <fa-icon [icon]="lapis"></fa-icon>
+            </button>
+            <button class="btn-acao-lixo" (click)="deletarContato(i)">
+              <fa-icon [icon]="lixo"></fa-icon>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+<app-modal #modal></app-modal>

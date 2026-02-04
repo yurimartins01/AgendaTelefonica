@@ -1,0 +1,35 @@
+# Imagem base do .NET SDK
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+
+WORKDIR /app
+
+# Copiar arquivos .csproj de todos os projetos
+COPY Agenda.API/*.csproj ./Agenda.API/
+COPY Agenda.Application/*.csproj ./Agenda.Application/
+COPY Agenda.Domain/*.csproj ./Agenda.Domain/
+COPY Agenda.Infra.Data/*.csproj ./Agenda.Infra.Data/
+COPY Agenda.Infra.Ioc/*.csproj ./Agenda.Infra.Ioc/
+
+# Restaurar dependências
+RUN dotnet restore Agenda.API/Agenda.API.csproj
+
+# Copiar todo o conteúdo do projeto
+COPY . .
+
+# Publicar o aplicativo
+RUN dotnet publish Agenda.API/Agenda.API.csproj -c Release -o /app/out
+
+# Imagem base do .NET Runtime
+FROM mcr.microsoft.com/dotnet/aspnet:8.0
+
+WORKDIR /app
+
+# Copiar os binários publicados
+COPY --from=build /app/out .
+
+# Expor as portas configuradas
+EXPOSE 5214
+EXPOSE 7016
+
+# Configurar o ponto de entrada
+ENTRYPOINT ["dotnet", "Agenda.API.dll"]
